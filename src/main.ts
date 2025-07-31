@@ -1,3 +1,4 @@
+import { ValidationPipe } from "@nestjs/common";
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 
@@ -8,6 +9,8 @@ async function server() {
 
     // Crea la aplicación
     const app = await NestFactory.create(AppModule);
+
+    app.useGlobalPipes(new ValidationPipe());
 
     // Inicia el servidor y escucha en el puerto especificado
     await app.listen(PORT);
