@@ -1,4 +1,4 @@
-import { ApiKeyGuard } from './api-key.guard';
+import { ApiKeyGuard } from './apiKey.guard';
 
 describe('ApiKeyGuard', () => {
   it('should be defined', () => {
