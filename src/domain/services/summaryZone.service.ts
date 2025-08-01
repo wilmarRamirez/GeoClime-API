@@ -6,7 +6,7 @@ import { Record } from '../../domain/entities/record.entity';
  */
 @Injectable()
 export class SummaryZoneService {
-    /**
+  /**
    * Calcula estadísticas de temperatura a partir de una lista de registros de una misma zona.
    *
    * @param {Record[]} records - Arreglo de registros de una misma zona.
@@ -27,12 +27,10 @@ export class SummaryZoneService {
 
     for (const record of records) {
       totalTemperature += record.temperature;
-      if (record.temperature < minTemperature) {
+      if (record.temperature < minTemperature)
         minTemperature = record.temperature;
-      }
-      if (record.temperature > maxTemperature) {
+      if (record.temperature > maxTemperature)
         maxTemperature = record.temperature;
-      }
     }
 
     const averageTemperature = totalTemperature / records.length;
