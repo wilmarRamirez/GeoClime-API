@@ -17,6 +17,7 @@ async function server() {
 
     // Mensaje de confirmación en la consola
     console.log(`server listening on port: ${PORT}`);
+    console.log(`http://localhost:${PORT}`);
   } catch (error) {
     // Muestra el error si algo falla en el arranque del servidor
     console.error('Error starting server', error);
